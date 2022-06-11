@@ -36,14 +36,7 @@ public class PatientController {
 
 
 
-    @PostMapping("/register-patient")
-    public ResponseEntity<Api> addPatient(@RequestBody @Valid RegisterPatientDto registerPatientDto){
-        logger.info("Register Patient");
-      patientService.addPatient(registerPatientDto.getAccount(),registerPatientDto.getPatient());
-        return ResponseEntity.status(201).body(new Api("Patient added",201));
 
-
-    }
     @PutMapping("/update-patient")
     public ResponseEntity<Patient> updatePatient(@RequestBody @Valid Patient patient){
         logger.info("Update Patient");

@@ -32,13 +32,7 @@ public class AdminController {
         return ResponseEntity.status(200).body(adminService.getAdminByEmail(account.getEmail()));
     }
 
-    @PostMapping("/register-admin")
-    public ResponseEntity<Api> addAdmin(@RequestBody @Valid RegisterAdminDto registerAdminDto){
-        adminService.addAdmin(registerAdminDto.getAccount(),registerAdminDto.getAdmin());
-        return ResponseEntity.status(201).body(new Api("Admin added",201));
 
-
-    }
     @PutMapping("/update-admin")
     public ResponseEntity<Admin> updateAdmin(@RequestBody @Valid Admin admin){
         Account account = Utils.getAccount(SecurityContextHolder.getContext());

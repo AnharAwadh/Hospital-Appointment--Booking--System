@@ -35,14 +35,7 @@ public class DoctorController {
         return ResponseEntity.status(200).body(doctorService.getDoctorByEmail(account.getEmail()));
     }
 
-    @PostMapping("/register-doctor")
-    public ResponseEntity<Api> addDoctor(@RequestBody @Valid RegisterDoctorDto registerDoctorDto){
-        logger.info("Register Doctor");
-        doctorService.addDoctor(registerDoctorDto.getAccount(),registerDoctorDto.getDoctor());
-        return ResponseEntity.status(201).body(new Api("Doctor added",201));
 
-
-    }
     @PutMapping("/update-doctor")
     public ResponseEntity<Doctor> updateDoctor(@RequestBody @Valid Doctor doctor){
         logger.info("Update Doctor");
