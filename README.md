@@ -2,8 +2,7 @@
 
 
 
-##Project Description
-### patient
+#Project Description
 - Enables the patient to see the available appointments.
 - The  patient can also book an appointment.
 - The  patient can also rate the doctor.
